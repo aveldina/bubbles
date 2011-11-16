@@ -4,7 +4,7 @@
  * @param {*} model The data Model for this Controller
  * @constructor
  */
-namespace.project.Controller = function( model ) {
+com.nowradio.website.Controller = function( model ) {
 	
 	this._model = model;
 	
@@ -18,7 +18,7 @@ namespace.project.Controller = function( model ) {
 /**
  * Starts the timer running
  */
-namespace.project.Controller.prototype.startTimer = function() {
+com.nowradio.website.Controller.prototype.startTimer = function() {
 	
 	var self = this;
 	
@@ -33,6 +33,6 @@ namespace.project.Controller.prototype.startTimer = function() {
 /**
  * Stops the current time from running
  */
-namespace.project.Controller.prototype.stopTimer = function() {
+com.nowradio.website.Controller.prototype.stopTimer = function() {
 	clearInterval( this._timer );
 }

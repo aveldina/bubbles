@@ -4,7 +4,7 @@
  * @param {Object} sender Target dispatcher for this event
  * @constructor
  */
-namespace.Event = function( sender ) {
+com.nowradio.Event = function( sender ) {
 	/**
 	 * Target dispatcher for this event
 	 * @private
@@ -23,7 +23,7 @@ namespace.Event = function( sender ) {
  * Attaches an observer to this event
  * @param {Function} observer An observer to attach to this event
  */
-namespace.Event.prototype.attach = function( observer ) {
+com.nowradio.Event.prototype.attach = function( observer ) {
 	this._observers.push( observer );
 }
 
@@ -31,7 +31,7 @@ namespace.Event.prototype.attach = function( observer ) {
  * Dispatches this event with given parameters to all observers
  * @param args zero or more arguments which will be passed to observers
  */
-namespace.Event.prototype.notify = function( args ) {
+com.nowradio.Event.prototype.notify = function( args ) {
 	for( var i = 0; i < this._observers.length; ++i ) {
 		this._observers[i]( this._sender, args );
 	}

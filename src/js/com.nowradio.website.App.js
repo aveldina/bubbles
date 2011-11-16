@@ -25,9 +25,9 @@ $(document).ready(function(){
 		
 			dom.output = $("#output");
 			
-			model		= new namespace.project.Model();
-			controller	= new namespace.project.Controller( model );
-			view		= new namespace.project.View( model, controller, dom );
+			model		= new com.nowradio.website.Model();
+			controller	= new com.nowradio.website.Controller( model );
+			view		= new com.nowradio.website.View( model, controller, dom );
 			
 			controller.startTimer();
 			

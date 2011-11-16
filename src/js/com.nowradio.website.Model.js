@@ -4,13 +4,13 @@
  * @param {Object=} data Initial data for the model
  * @constructor
  */
-namespace.project.Model = function( data ) {
+com.nowradio.website.Model = function( data ) {
 	
 	/**
 	 * Dispatched when the time is updated
-	 * @type {namespace.Event}
+	 * @type {com.nowradio.Event}
 	 */
-	this.onTimeChanged = new namespace.Event( this );
+	this.onTimeChanged = new com.nowradio.Event( this );
 	
 	/**
 	 * @private
@@ -23,14 +23,14 @@ namespace.project.Model = function( data ) {
 /**
  * @return {Date} The current time.
  */
-namespace.project.Model.prototype.getTime = function() {
+com.nowradio.website.Model.prototype.getTime = function() {
 	return this._data.time;
 }
 
 /**
  * @param {Date} time The current time
  */
-namespace.project.Model.prototype.setTime = function( time ) {
+com.nowradio.website.Model.prototype.setTime = function( time ) {
 	this._data.time = time;
 	this.onTimeChanged.notify( time );
 }

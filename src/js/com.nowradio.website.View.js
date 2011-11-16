@@ -6,7 +6,7 @@
  * @param {Object} dom References to DOM objects used in this view
  * @constructor
  */
-namespace.project.View = function( model, controller, dom ) {
+com.nowradio.website.View = function( model, controller, dom ) {
 	
 	this._controller = controller;
 	this._model = model;
@@ -24,12 +24,12 @@ namespace.project.View = function( model, controller, dom ) {
  * @const
  * @type {string}
  */
-namespace.project.View.TIME_PREFIX = "The Time Is: ";
+com.nowradio.website.View.TIME_PREFIX = "The Time Is: ";
 
 /**
  * Updates the current time displayed in the view
  * @param {Date} time The time to display
  */
-namespace.project.View.prototype.updateTime = function( time ) {
-	this._dom.output.html( namespace.project.View.TIME_PREFIX + time.toString() );
+com.nowradio.website.View.prototype.updateTime = function( time ) {
+	this._dom.output.html( com.nowradio.website.View.TIME_PREFIX + time.toString() );
 }
