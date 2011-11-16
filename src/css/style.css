@@ -1,6 +1,6 @@
 html, body {
 	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
-	background-color: #F5F5F5;
+	background-color: #4488aa;
 	margin: 20px;
 	color: #333;
 }
@@ -23,4 +23,56 @@ h2 {
 	font-size: 16px;
 	margin: 28px 0;
 	padding: 8px;
+}
+
+/** ======== DOT CSS SECTION ======== */
+#dots
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10000px;
+	overflow: hidden;
+}
+
+#dots-holder 
+{
+	position: relative;
+	width: 960px;
+	height: 100%;
+	min-height: 100%;
+	//margin: 0 auto;
+}
+
+.dot-wrap {
+	//height: 288px;
+	//width: 280px;
+	position: absolute;
+}
+.dot {
+	position: relative;
+	display: block;
+	background:transparent url('../img/dots_sprite.png') no-repeat 0 0;
+	height: 288px;
+	width: 280px;
+	
+	-webkit-transition: all 800ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+   	-moz-transition: all 1200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -ms-transition: all 1200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -o-transition: all 1200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    transition: all 1200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+.one {
+	z-index: -101; //Positive z-index places dots on top of content
+	background-position:0px 0px;
+}
+.two {
+	z-index: -102;
+	background-position:-280px 0px;
+}
+.three {
+	z-index: -103;
+	background-position:-560px 0px;
 }
